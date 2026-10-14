@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">JV Story</title>
+  <rect width="64" height="64" rx="14" fill="#faf7f2"/>
+  <path d="M32 57C26 52 5 36 5 22C5 7 23 6 32 19C41 6 59 7 59 22C59 36 38 52 32 57Z" fill="#965c50"/>
+  <path d="M19 25H28V35C28 44 15 44 15 34H19C19 39 24 39 24 35V29H19Z M31 25H36L40 36L44 25H49L43 42H37Z" fill="#faf7f2"/>
+</svg>

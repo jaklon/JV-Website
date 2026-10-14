@@ -1,0 +1,586 @@
+{
+  "fixture_only": true,
+  "retrieval": "php-sql",
+  "correct": 33,
+  "total": 33,
+  "all_pass": true,
+  "manual_review_required": true,
+  "results": [
+    {
+      "test": "Kapan kita mulai hubungan?",
+      "passed": true,
+      "response": {
+        "answer": "Tanggal: 2022-07-19.",
+        "source_keys": [
+          "profile:1"
+        ],
+        "prompt_tokens": 73,
+        "output_tokens": 14,
+        "duration_ms": 1431,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 15
+      }
+    },
+    {
+      "test": "Siapa nama pasangan di JV Story?",
+      "passed": true,
+      "response": {
+        "answer": "Nama: Nara & Bima.",
+        "source_keys": [
+          "profile:1"
+        ],
+        "prompt_tokens": 68,
+        "output_tokens": 8,
+        "duration_ms": 1117,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 9
+      }
+    },
+    {
+      "test": "Apa tagline kita?",
+      "passed": true,
+      "response": {
+        "answer": "Tagline: Rumah adalah kita.",
+        "source_keys": [
+          "profile:1"
+        ],
+        "prompt_tokens": 65,
+        "output_tokens": 8,
+        "duration_ms": 1081,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 9
+      }
+    },
+    {
+      "test": "Naik apa kita ke Bandung?",
+      "passed": true,
+      "response": {
+        "answer": "Bandung. Kita naik bus.",
+        "source_keys": [
+          "memory:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "prompt_tokens": 72,
+        "output_tokens": 9,
+        "duration_ms": 1042,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": true,
+        "generation_tokens": 5
+      }
+    },
+    {
+      "test": "Apa warna payung saat di Bandung?",
+      "passed": true,
+      "response": {
+        "answer": "Lokasi: Bandung. Nara membawa payung merah.",
+        "source_keys": [
+          "memory:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "prompt_tokens": 78,
+        "output_tokens": 16,
+        "duration_ms": 1469,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 17
+      }
+    },
+    {
+      "test": "Siapa membawa payung di Bandung?",
+      "passed": true,
+      "response": {
+        "answer": "Lokasi: Bandung. Nara membawa payung merah.",
+        "source_keys": [
+          "memory:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "prompt_tokens": 77,
+        "output_tokens": 16,
+        "duration_ms": 1416,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 17
+      }
+    },
+    {
+      "test": "Di kota mana kenangan Pagi di Bandung?",
+      "passed": true,
+      "response": {
+        "answer": "Lokasi: Bandung.",
+        "source_keys": [
+          "memory:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "prompt_tokens": 70,
+        "output_tokens": 7,
+        "duration_ms": 1121,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 8
+      }
+    },
+    {
+      "test": "Apa bekal kita ke Bogor?",
+      "passed": true,
+      "response": {
+        "answer": "Lokasi: Bogor. Bekal kita roti selai.",
+        "source_keys": [
+          "memory:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        ],
+        "prompt_tokens": 75,
+        "output_tokens": 15,
+        "duration_ms": 1474,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 16
+      }
+    },
+    {
+      "test": "Apa nama album sarapan di Bandung?",
+      "passed": true,
+      "response": {
+        "answer": "Pagi bersama.",
+        "source_keys": [
+          "album:cccccccccccccccccccccccccccccccc"
+        ],
+        "prompt_tokens": 69,
+        "output_tokens": 5,
+        "duration_ms": 991,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 6
+      }
+    },
+    {
+      "test": "Apa deskripsi album Pagi bersama?",
+      "passed": true,
+      "response": {
+        "answer": "Kumpulan sarapan di Bandung.",
+        "source_keys": [
+          "album:cccccccccccccccccccccccccccccccc"
+        ],
+        "prompt_tokens": 70,
+        "output_tokens": 9,
+        "duration_ms": 1409,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": true,
+        "generation_tokens": 18
+      }
+    },
+    {
+      "test": "Apa isi surat Untuk Bima?",
+      "passed": true,
+      "response": {
+        "answer": "Terima kasih sudah menemaniku saat hujan turun.",
+        "source_keys": [
+          "letter:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+        ],
+        "prompt_tokens": 76,
+        "output_tokens": 15,
+        "duration_ms": 1506,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": true,
+        "generation_tokens": 20
+      }
+    },
+    {
+      "test": "Kapan ulang tahun Bima?",
+      "passed": true,
+      "response": {
+        "answer": "Tanggal: 1999-03-11.",
+        "source_keys": [
+          "date:dddddddddddddddddddddddddddddddd"
+        ],
+        "prompt_tokens": 73,
+        "output_tokens": 14,
+        "duration_ms": 1253,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 15
+      }
+    },
+    {
+      "test": "Kenangan kita bulan lalu apa?",
+      "passed": true,
+      "response": {
+        "answer": "Pagi di Bandung — 2026-09-21.",
+        "source_keys": [
+          "memory:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "prompt_tokens": 78,
+        "output_tokens": 18,
+        "duration_ms": 1480,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 19
+      }
+    },
+    {
+      "test": "Di hotel mana kita menginap di Bandung?",
+      "passed": true,
+      "response": {
+        "answer": "Belum ditemukan dalam kenangan kita. Bisa tambahkan judul, tempat, atau tanggal yang kamu maksud?",
+        "source_keys": [],
+        "prompt_tokens": 0,
+        "output_tokens": 27,
+        "duration_ms": 0,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "not_found",
+        "model_called": false,
+        "used_fallback": false,
+        "generation_tokens": 0
+      }
+    },
+    {
+      "test": "Kapan tanggal pernikahan kita?",
+      "passed": true,
+      "response": {
+        "answer": "Belum ditemukan dalam kenangan kita. Bisa tambahkan judul, tempat, atau tanggal yang kamu maksud?",
+        "source_keys": [],
+        "prompt_tokens": 0,
+        "output_tokens": 27,
+        "duration_ms": 0,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "not_found",
+        "model_called": false,
+        "used_fallback": false,
+        "generation_tokens": 0
+      }
+    },
+    {
+      "test": "Apa warna mobil saat di Bandung?",
+      "passed": true,
+      "response": {
+        "answer": "Belum ditemukan dalam kenangan kita. Bisa tambahkan judul, tempat, atau tanggal yang kamu maksud?",
+        "source_keys": [],
+        "prompt_tokens": 0,
+        "output_tokens": 27,
+        "duration_ms": 0,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "not_found",
+        "model_called": false,
+        "used_fallback": false,
+        "generation_tokens": 0
+      }
+    },
+    {
+      "test": "Aku ingin tahu apa bekal kita ke Bogor?",
+      "passed": true,
+      "response": {
+        "answer": "Lokasi: Bogor. Bekal kita roti selai.",
+        "source_keys": [
+          "memory:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        ],
+        "prompt_tokens": 79,
+        "output_tokens": 15,
+        "duration_ms": 1376,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 16
+      }
+    },
+    {
+      "test": "Changed fact ungu",
+      "passed": true,
+      "response": {
+        "answer": "Lokasi: Bandung. Nara membawa payung ungu.",
+        "source_keys": [
+          "memory:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "prompt_tokens": 78,
+        "output_tokens": 16,
+        "duration_ms": 1376,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 17
+      }
+    },
+    {
+      "test": "Changed fact kuning",
+      "passed": true,
+      "response": {
+        "answer": "Lokasi: Bandung. Nara membawa payung kuning.",
+        "source_keys": [
+          "memory:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "prompt_tokens": 78,
+        "output_tokens": 16,
+        "duration_ms": 1355,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 17
+      }
+    },
+    {
+      "test": "Changed fact hitam",
+      "passed": true,
+      "response": {
+        "answer": "Bandung. Nara membawa payung hitam.",
+        "source_keys": [
+          "memory:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "prompt_tokens": 78,
+        "output_tokens": 12,
+        "duration_ms": 1170,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": true,
+        "generation_tokens": 10
+      }
+    },
+    {
+      "test": "Follow-up points to earlier trip",
+      "passed": true,
+      "response": {
+        "answer": "Lokasi: Bandung. Nara membawa payung merah.",
+        "source_keys": [
+          "memory:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "prompt_tokens": 75,
+        "output_tokens": 16,
+        "duration_ms": 1429,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 17
+      }
+    },
+    {
+      "test": "Incorrect assistant history cannot override source",
+      "passed": true,
+      "response": {
+        "answer": "Lokasi: Bandung. Nara membawa payung merah.",
+        "source_keys": [
+          "memory:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        "prompt_tokens": 75,
+        "output_tokens": 16,
+        "duration_ms": 1378,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "facts",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 17
+      }
+    },
+    {
+      "test": "Draft request blocked after real retrieval",
+      "passed": true,
+      "response": {
+        "answer": "Draft surat bersifat pribadi dan tidak digunakan oleh chat. Ada surat yang sudah dikirim yang ingin kamu buka?",
+        "source_keys": [],
+        "prompt_tokens": 0,
+        "output_tokens": 29,
+        "duration_ms": 0,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "draft",
+        "model_called": false,
+        "used_fallback": false,
+        "generation_tokens": 0
+      }
+    },
+    {
+      "test": "Aku sedih karena hari ini terasa berat. Boleh aku cerita?",
+      "passed": true,
+      "response": {
+        "answer": "Terima kasih sudah bercerita. Aku mendengarkan. Bagian mana yang paling ingin kamu ceritakan?",
+        "source_keys": [],
+        "prompt_tokens": 111,
+        "output_tokens": 28,
+        "duration_ms": 1890,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "conversation",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 19,
+        "conversation_style": "guided"
+      }
+    },
+    {
+      "test": "Aku senang hari ini karena bisa ketemu Bima.",
+      "passed": true,
+      "response": {
+        "answer": "Terima kasih sudah bercerita. Aku mendengarkan. Bagaimana perasaanmu setelah mengalami momen itu?",
+        "source_keys": [],
+        "prompt_tokens": 109,
+        "output_tokens": 32,
+        "duration_ms": 2067,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "conversation",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 22,
+        "conversation_style": "guided"
+      }
+    },
+    {
+      "test": "Hari ini aku bertengkar dengan pacarku dan merasa bingung.",
+      "passed": true,
+      "response": {
+        "answer": "Terima kasih sudah bercerita. Aku mendengarkan. Bagian mana dari situasi ini yang paling ingin kamu pahami?",
+        "source_keys": [],
+        "prompt_tokens": 117,
+        "output_tokens": 32,
+        "duration_ms": 2112,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "conversation",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 23,
+        "conversation_style": "guided"
+      }
+    },
+    {
+      "test": "Aku capek setelah bekerja seharian.",
+      "passed": true,
+      "response": {
+        "answer": "Terima kasih sudah bercerita. Aku mendengarkan. Bagian mana dari harimu yang paling melelahkan?",
+        "source_keys": [],
+        "prompt_tokens": 101,
+        "output_tokens": 30,
+        "duration_ms": 1947,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "conversation",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 21,
+        "conversation_style": "guided"
+      }
+    },
+    {
+      "test": "Aku kecewa karena rencanaku batal.",
+      "passed": true,
+      "response": {
+        "answer": "Terima kasih sudah bercerita. Aku mendengarkan. Apa yang paling terasa berat buatmu saat ini?",
+        "source_keys": [],
+        "prompt_tokens": 105,
+        "output_tokens": 31,
+        "duration_ms": 1898,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "conversation",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 20,
+        "conversation_style": "guided"
+      }
+    },
+    {
+      "test": "Aku merasa kurang didengar oleh pasangan.",
+      "passed": true,
+      "response": {
+        "answer": "Terima kasih sudah bercerita. Aku mendengarkan. Bagaimana cara komunikasi yang terasa nyaman buatmu?",
+        "source_keys": [],
+        "prompt_tokens": 111,
+        "output_tokens": 32,
+        "duration_ms": 2043,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "conversation",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 22,
+        "conversation_style": "guided"
+      }
+    },
+    {
+      "test": "Aku merasa kesepian hari ini.",
+      "passed": true,
+      "response": {
+        "answer": "Terima kasih sudah bercerita. Aku mendengarkan. Apa yang paling terasa berat buatmu saat ini?",
+        "source_keys": [],
+        "prompt_tokens": 102,
+        "output_tokens": 31,
+        "duration_ms": 1775,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "conversation",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 20,
+        "conversation_style": "guided"
+      }
+    },
+    {
+      "test": "Aku bersyukur kami bisa saling mendukung.",
+      "passed": true,
+      "response": {
+        "answer": "Terima kasih sudah bercerita. Aku mendengarkan. Bagaimana perasaanmu setelah mengalami momen itu?",
+        "source_keys": [],
+        "prompt_tokens": 110,
+        "output_tokens": 32,
+        "duration_ms": 2014,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "conversation",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 23,
+        "conversation_style": "guided"
+      }
+    },
+    {
+      "test": "Halo, boleh temani aku ngobrol sebentar?",
+      "passed": true,
+      "response": {
+        "answer": "Hai, aku di sini untuk mendengarkan. Bagaimana harimu?",
+        "source_keys": [],
+        "prompt_tokens": 81,
+        "output_tokens": 18,
+        "duration_ms": 1583,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "conversation",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 13,
+        "conversation_style": "guided"
+      }
+    },
+    {
+      "test": "Conversation continues without repeating aku",
+      "passed": true,
+      "response": {
+        "answer": "Terima kasih sudah bercerita. Aku mendengarkan. Bagaimana cara komunikasi yang terasa nyaman buatmu?",
+        "source_keys": [],
+        "prompt_tokens": 147,
+        "output_tokens": 32,
+        "duration_ms": 2551,
+        "model": "qwen3-0.6b-q4_k_m",
+        "answer_mode": "conversation",
+        "model_called": true,
+        "used_fallback": false,
+        "generation_tokens": 23,
+        "conversation_style": "guided"
+      }
+    }
+  ]
+}

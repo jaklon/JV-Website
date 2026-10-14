@@ -1,0 +1,19 @@
+{
+  "service_url": "https://REPLACE.run.app",
+  "model": "qwen3-0.6b-q4_k_m",
+  "quality_pass": false,
+  "cost_pass": false,
+  "runtime_pass": false,
+  "iam_pass": false,
+  "checked_at": "",
+  "evidence": {
+    "quality_report": "",
+    "manual_indonesian_review": "",
+    "gcp_memory_and_latency": "",
+    "registry_total_bytes": null,
+    "billing_free_tier_remaining": "",
+    "hosting_egress_cost": "",
+    "iam_access_tests": "",
+    "spend_cap_configured": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "reviewed_at": "2026-10-08",
+  "reviewer": "implementation agent",
+  "fixture_only": true,
+  "report": "evaluation-extended.json",
+  "conversation_samples_reviewed": 10,
+  "indonesian_language_pass": true,
+  "context_relevance_pass": true,
+  "scope": "Short guided listening questions; not unrestricted Qwen generation.",
+  "checks": [
+    "All ten actual outputs use clear Indonesian questions.",
+    "No shared feelings, invented dates or relationship decisions are asserted.",
+    "Questions follow the user's disclosure and use the conversation context.",
+    "Greeting, fatigue, positive feelings, conflict and communication cases were read individually."
+  ],
+  "gcp_verified": false
+}

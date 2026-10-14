@@ -1,0 +1,25 @@
+import { useEffect, useState, type ReactNode } from 'react';
+import { BrowserRouter, Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import { AnimatePresence, MotionConfig, motion } from 'motion/react';
+import { CalendarHeart, Camera, Film as FilmIcon, FolderHeart, Heart, Home as HomeIcon, LoaderCircle, LogOut, Mail, Settings as SettingsIcon, Clock3, Plus } from 'lucide-react';
+import { StoryProvider, useStory } from './store';
+import { Login } from './pages/Login';
+import { Home } from './pages/Home';
+import { Timeline, Albums, Letters, Dates, Settings } from './pages/Collections';
+import { MemoryDetail } from './pages/MemoryDetail';
+import { Film } from './pages/Film';
+import { ChatLauncher, ChatPage } from './components/Chat';
+import { MemoryForm } from './components/MemoryForm';
+import { Empty, ErrorMessage } from './components/ui';
+
+const links=[{to:'/',label:'Cerita kita',icon:HomeIcon},{to:'/timeline',label:'Timeline',icon:Clock3},{to:'/album',label:'Album',icon:FolderHeart},{to:'/surat',label:'Surat',icon:Mail},{to:'/film',label:'Film kenangan',icon:FilmIcon}];
+function Shell() {
+  const {session,data,loading,error,logout,refresh}=useStory(),location=useLocation();
+  const [adding,setAdding]=useState(false),[menu,setMenu]=useState(false),[logoutError,setLogoutError]=useState('');
+  useEffect(()=>{window.scrollTo({top:0});setMenu(false);},[location.pathname]);
+  if(loading)return <div className="loading-screen"><Heart size={34} strokeWidth={1}/><span>Menyiapkan ruang kita…</span><LoaderCircle size={18} className="spin"/></div>;
+  if(!session?.user)return <Login/>;
+  if(!data)return <div className="loading-screen"><ErrorMessage message={error||'Data belum dapat dimuat.'}/><button className="button secondary" onClick={()=>void refresh().catch(e=>setLogoutError(e.message))}>Coba lagi</button><ErrorMessage message={logoutError}/><button className="text-link" onClick={()=>void logout()}>Keluar</button></div>;
+  return <div className="app-shell">{session.demo&&<div className="demo-banner"><span>MODE DEMO · Data contoh, perubahan hanya bertahan selama halaman terbuka.</span><button onClick={()=>void logout()}>Kembali ke login <LogOut size={12}/></button></div>}<header className="site-header"><Link to="/" className="brand"><span className="brand-mark"><Heart size={18}/></span>jv story<span className="brand-dot">.</span></Link><nav className="desktop-nav" aria-label="Navigasi utama">{links.map(link=><NavLink key={link.to} to={link.to} end={link.to==='/'}>{link.label}</NavLink>)}</nav><div className="header-actions"><Link to="/tanggal" className="icon-button date-nav" aria-label="Tanggal penting"><CalendarHeart size={19}/></Link><button className="header-add" onClick={()=>setAdding(true)} aria-label="Tambah kenangan"><Plus size={18}/></button><div className="profile-wrap"><button className="profile-button" onClick={()=>setMenu(!menu)} aria-label="Menu akun" aria-expanded={menu}><span className="avatar">{session.user.name[0]}</span><span className="profile-name">{session.user.name.split(' ')[0]}</span></button>{menu&&<div className="profile-menu"><span>Ruang {data.settings.names}</span><Link to="/chat">Teman cerita</Link><Link to="/pengaturan"><SettingsIcon size={15}/>Pengaturan</Link><Link to="/tanggal"><CalendarHeart size={15}/>Tanggal penting</Link><button onClick={async()=>{try{await logout();}catch(e){setLogoutError((e as Error).message);}}}><LogOut size={15}/>Keluar</button><ErrorMessage message={logoutError}/></div>}</div></div></header><main className="site-main"><AnimatePresence mode="wait"><motion.div key={location.pathname} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:0.15}}><Routes location={location}><Route path="/" element={<Home onAdd={()=>setAdding(true)}/>}/><Route path="/timeline" element={<Timeline onAdd={()=>setAdding(true)}/>}/><Route path="/kenangan/:id" element={<MemoryDetail/>}/><Route path="/album" element={<Albums/>}/><Route path="/surat" element={<Letters/>}/><Route path="/tanggal" element={<Dates/>}/><Route path="/pengaturan" element={<Settings/>}/><Route path="/film" element={<Film/>}/><Route path="/chat" element={<ChatPage/>}/><Route path="*" element={<Empty title="Halaman ini belum ada" description="Kembali ke cerita kalian." action={<Link to="/" className="button secondary">Beranda</Link>}/>}/></Routes></motion.div></AnimatePresence></main><footer className="site-footer"><span>Made of little moments <Heart size={12}/></span><span>{data.settings.names} · JV STORY</span><Link to="/pengaturan">Ruang kita <SettingsIcon size={13}/></Link></footer><nav className="mobile-nav" aria-label="Navigasi mobile">{links.map(link=><NavLink key={link.to} to={link.to} end={link.to==='/'}><link.icon size={19}/><span>{link.label==='Film kenangan'?'Film':link.label}</span></NavLink>)}</nav><ChatLauncher/>{adding&&<MemoryForm onClose={()=>setAdding(false)}/>}</div>;
+}
+export default function App() {return <MotionConfig reducedMotion="user"><StoryProvider><BrowserRouter basename={import.meta.env.BASE_URL}><Shell/></BrowserRouter></StoryProvider></MotionConfig>;}

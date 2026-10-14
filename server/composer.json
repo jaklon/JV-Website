@@ -1,0 +1,6 @@
+{
+  "name": "jv-story/api", "description": "Private couples memory API", "type": "project",
+  "require": { "php": ">=8.1", "ext-pdo": "*", "ext-pdo_mysql": "*", "ext-fileinfo": "*", "ext-curl": "*", "google/apiclient": "^2.18" },
+  "config": { "sort-packages": true },
+  "scripts": { "test": "php tests/policy.php" }
+}

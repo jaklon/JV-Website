@@ -1,0 +1,12 @@
+export type User = { id: string; name: string; email: string; picture?: string };
+export type Media = { id: string; memory_id: string | null; user_id: string; kind: 'image' | 'video' | 'audio'; url: string; name: string; size: number; duration?: number };
+export type Memory = { id: string; user_id: string; title: string; date: string; location: string; story: string; album_id: string | null; media: Media[]; created_at: string };
+export type Album = { id: string; user_id: string; title: string; description: string };
+export type Letter = { id: string; user_id: string; title: string; body: string; status: 'draft' | 'sent'; sent_at: string | null; created_at: string };
+export type ImportantDate = { id: string; user_id: string; title: string; date: string; recurring: boolean };
+export type Settings = { names: string; since: string | null; tagline: string; cover_id: string | null };
+export type FilmItem = { mediaId: string; duration: number; start: number; end: number };
+export type FilmRecipe = { version: 1; items: FilmItem[]; orientation: 'landscape' | 'portrait'; transition: 'cut' | 'fade'; musicId: string | null };
+export type FilmProject = { id: string; user_id: string; title: string; recipe: FilmRecipe; updated_at: string };
+export type StoryData = { users: User[]; settings: Settings; memories: Memory[]; albums: Album[]; letters: Letter[]; dates: ImportantDate[]; projects: FilmProject[]; audio: Media[] };
+export type Session = { user: User | null; csrf: string; configured: boolean; demo?: boolean };
